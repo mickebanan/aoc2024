@@ -7,7 +7,7 @@ data = """
 1   3
 3   9
 3   3""".split('\n')
-data = open('1.dat').readlines()
+data = open('data/1.dat').readlines()
 values = [tuple(row.split()) for row in data if row]
 first = sorted(int(t[0]) for t in values)
 second1 = sorted(int(t[1]) for t in values)

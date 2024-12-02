@@ -8,7 +8,7 @@ data = """7 6 4 2 1
 1 3 2 4 5
 8 6 4 4 1
 1 3 6 7 9""".split('\n')
-data = open('2.dat').readlines()
+data = open('data/2.dat').readlines()
 
 def check_values(values):
     first = values[0]
