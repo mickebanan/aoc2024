@@ -2,12 +2,13 @@ import itertools
 
 import helpers
 
-data = """7 6 4 2 1
+data = """
+7 6 4 2 1
 1 2 7 8 9
 9 7 6 2 1
 1 3 2 4 5
 8 6 4 4 1
-1 3 6 7 9""".split('\n')
+1 3 6 7 9""".strip().split('\n')
 data = open('data/2.dat').readlines()
 
 def check_values(values):
@@ -28,17 +29,18 @@ def check_values(values):
 
 @helpers.timer
 def solve():
-    s1 = s2 = 0
+    p1 = p2 = 0
     for row in data:
         values = [int(v) for v in row.split()]
         ret = check_values(values)
         if ret is True:
-            s1 += 1
+            p1 += 1
         else:
             for v in sorted(ret):
                 vals = values[:v] + values[v+1:]
                 if check_values(vals) is True:
-                    s2 += 1
+                    p2 += 1
                     break
-    print(s1, s1 + s2)
+    print('p1:', p1)
+    print('p2:', p1 + p2)
 solve()
