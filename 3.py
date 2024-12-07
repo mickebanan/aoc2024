@@ -15,5 +15,5 @@ for m in re.finditer(r'do\(\)|don\'t\(\)|mul\((\d+),(\d+)\)', data):
         continue
     if do:
         p2 += value
-print('p1:', p1)
-print('p2:', p2)
+print('part 1:', p1)
+print('part 2:', p2)

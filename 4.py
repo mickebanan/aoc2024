@@ -51,5 +51,5 @@ for y in range(ymax + 1):
         elif data[y][x] == 'A':
             if check(y, x, combinations=('SAM', 'MAS'), directions=x_directions, p1=False):
                 p2 += 1
-print('p1:', p1)
-print('p2:', p2)
+print('part 1:', p1)
+print('part 2:', p2)

@@ -41,6 +41,6 @@ def solve():
                 if check_values(vals) is True:
                     p2 += 1
                     break
-    print('p1:', p1)
-    print('p2:', p1 + p2)
+    print('part 1:', p1)
+    print('part 2:', p1 + p2)
 solve()

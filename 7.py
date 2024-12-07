@@ -34,5 +34,5 @@ for row in data:
         p1 += result
     if any(a for a in work(result, operands, (add, mul, concat))):
         p2 += result
-print('p1', p1)
-print('p2', p2)
+print('part 1:', p1)
+print('part 2:', p2)

@@ -21,6 +21,6 @@ def solve():
         p1 += abs(v1 - v2)
         score = len([v2 for v2 in second2 if v2 == v1])
         p2 += v1 * score
-    print('p1:', p1)
-    print('p2:', p2)
+    print('part 1:', p1)
+    print('part 2:', p2)
 solve()

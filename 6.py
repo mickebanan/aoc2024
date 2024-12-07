@@ -49,7 +49,7 @@ def move(data):
     return visited, loop_found
 
 visited, _ = move(data)
-print('p1:', len(visited))
+print('part 1:', len(visited))
 
 p2 = 0
 for y, x in visited:
@@ -60,4 +60,4 @@ for y, x in visited:
     _, loop_found = move(d)
     if loop_found:
         p2 += 1
-print('p2:', p2)
+print('part 2:', p2)
