@@ -39,7 +39,6 @@ def get_antinodes(y1, x1, y2, x2, part_1=True):
     yield from get_next(y1, x1, y_here, x_here)
     yield from get_next(y2, x2, y_there, x_there)
 
-
 for node, pos in nodes.items():
     for (y1, x1), (y2, x2) in itertools.combinations(pos, 2):
         antinodes_p2.add((y1, x1))
