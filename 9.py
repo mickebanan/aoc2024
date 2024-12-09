@@ -14,12 +14,10 @@ free_space = []
 file_id = pos = 0
 for c in data:
     if next(filetype):
-        for p in range(pos, pos + int(c)):
-            files[file_id].append(p)
+        files[file_id].extend(list(range(pos, pos + int(c))))
         file_id += 1
     else:
-        for p in range(pos, pos + int(c)):
-            free_space.append(p)
+        free_space.extend(list(range(pos, pos + int(c))))
     pos += int(c)
 
 def group_free_space(free_space):
@@ -73,15 +71,5 @@ def sort(files, free_space, part=1):
     return files
 
 free_space = group_free_space(free_space)
-p1 = 0
-for file, segments in sort(files, free_space).items():
-    for pos in segments:
-        p1 += file * pos
-print('part 1:', p1)
-
-p2 = 0
-# # free_space = group_free_space(free_space)
-for file, segments in sort(files, free_space, part=2).items():
-    for pos in segments:
-        p2 += file * pos
-print('part 2:', p2)
+print('part 1:', sum(file * pos for file, segments in sort(files, free_space).items() for pos in segments))
+print('part 2:', sum(file * pos for file, segments in sort(files, free_space, part=2).items() for pos in segments))
